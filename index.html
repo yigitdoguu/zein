@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Dağıtım Merkezi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #58a6ff;
+            --bg: #0d1117;
+            --card-bg: rgba(22, 27, 34, 0.8);
+            --border: #30363d;
+            --text: #c9d1d9;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            background-image: radial-gradient(circle at top right, #161b22, #0d1117);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #8b949e;
+            font-size: 1.1rem;
+        }
+
+        /* ISO Kartları Düzeni */
+        .iso-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .iso-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .iso-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(88, 166, 255, 0.1);
+        }
+
+        .iso-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .iso-title {
+            font-size: 1.4rem;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .iso-info {
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #238636;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #2ea043;
+        }
+
+        .download-btn i {
+            margin-right: 10px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            color: #3fb950;
+        }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #3fb950;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #3fb950;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1><i class="fas fa-server"></i> ISO Cloud Hub</h1>
+        <p>Yüksek hızlı, 7/24 kesintisiz işletim sistemi dağıtım merkezi.</p>
+    </div>
+
+    <div class="iso-grid">
+        <div class="iso-card">
+            <div class="iso-icon"><i class="fab fa-windows"></i></div>
+            <div class="iso-title">Windows Pro Custom</div>
+            <div class="iso-info">Boyut: 4.2 GB <br> Versiyon: v2026.1</div>
+            <a href="BURAYA_LİNK_1" class="download-btn">
+                <i class="fas fa-download"></i> İndir
+            </a>
+            <div class="status"><span class="status-dot"></span> Sunucu Aktif</div>
+        </div>
+
+        <div class="iso-card">
+            <div class="iso-icon"><i class="fab fa-linux"></i></div>
+            <div class="iso-title">Linux Lite Mod</div>
+            <div class="iso-info">Boyut: 1.8 GB <br> Versiyon: Stable</div>
+            <a href="BURAYA_LİNK_2" class="download-btn">
+                <i class="fas fa-download"></i> İndir
+            </a>
+            <div class="status"><span class="status-dot"></span> Sunucu Aktif</div>
+        </div>
+
+        <div class="iso-card">
+            <div class="iso-icon"><i class="fas fa-compact-disc"></i></div>
+            <div class="iso-title">Rescue Disk ISO</div>
+            <div class="iso-info">Boyut: 650 MB <br> Kurtarma Aracı</div>
+            <a href="BURAYA_LİNK_3" class="download-btn">
+                <i class="fas fa-download"></i> İndir
+            </a>
+            <div class="status"><span class="status-dot"></span> Sunucu Aktif</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
